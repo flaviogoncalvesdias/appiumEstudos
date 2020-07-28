@@ -24,7 +24,7 @@ public class FormularioTeste {
 		desiredCapabilities.setCapability("platformName", "Android");
 	    desiredCapabilities.setCapability("deviceName", "RQ8MA0F8HRT");
 	    desiredCapabilities.setCapability("automationName", "uiautomator2");
-	    desiredCapabilities.setCapability("app", "Users/mac/Documents/Projetos_Estudos/EstudosApiUdemy/EstudosAppiumUdemy/src/test/resources/CTAppium_1_2.apk");
+	    desiredCapabilities.setCapability("app", "/Users/mac/Documents/Projetos_Estudos/EstudosApiUdemy/EstudosAppiumUdemy/appiumEstudos/src/test/resources/CTAppium_1_2.apk");
 	    desiredCapabilities.setCapability("autoGrantPermissions","true");
 	    desiredCapabilities.setCapability("noReset","true");
 
@@ -38,11 +38,7 @@ public class FormularioTeste {
 	    
 	    MobileElement nome = (MobileElement) driver.findElement(MobileBy.AccessibilityId("nome"));
 	    nome.sendKeys("Flávio Dias");
-	    
-//	    for (MobileElement mobileElement : elementosEncontrados) {
-//			System.out.println(mobileElement.getText());
-//		}
-	    
+	    	    
 	    assertEquals("Flávio Dias", nome.getText()); 
 	    driver.quit();
 	}
